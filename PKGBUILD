@@ -1,4 +1,8 @@
-# Created by: Tk-Glitch <ti3nou at gmail dot com>
+# Maintained by durcor <durcor@disroot.org>
+#
+# Based off of
+# Tk-Glitch <ti3nou at gmail dot com>'s
+# AMDVLK-PRO PKGBUILD
 
 plain '       .---.`               `.---.'
 plain '    `/syhhhyso-           -osyhhhys/`'
@@ -27,7 +31,7 @@ arch=('x86_64')
 url='http://www.amd.com'
 license=('custom:AMD')
 makedepends=('wget')
-depends=('amdgpu-pro-vulkan-only ffmpeg-amd-full-git')
+depends=('amdgpu-pro-vulkan-only' 'ffmpeg-amd-full-git')
 
 DLAGENTS='https::/usr/bin/wget --referer https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux.aspx -N %u'
 
@@ -52,6 +56,8 @@ package_amdgpu-pro-amf-only () {
 	extract_deb "${srcdir}"/amdgpu-pro-${_pkgveramd}-ubuntu-18.04/./amf-amdgpu-pro_${_pkgveramd}_amd64.deb
 
 	rm -rf "${pkgdir}"/etc
+
+    sudo ln -s /opt/amdgpu-pro/lib/x86_64-linux-gnu/libamfrt64.so.1.4.17 /lib/libamfrt64.so.1
 
 	msg2 "#################################################################"
 	msg2 ""
