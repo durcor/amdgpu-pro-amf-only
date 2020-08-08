@@ -57,7 +57,7 @@ package_amdgpu-pro-amf-only () {
 
 	rm -rf "${pkgdir}"/etc
 
-    sudo ln -s /opt/amdgpu-pro/lib/x86_64-linux-gnu/libamfrt64.so.1.4.17 /lib/libamfrt64.so.1
+    sudo ln -s /opt/amdgpu-pro/lib/x86_64-linux-gnu/libamfrt64.so.0.0.0 /lib/libamfrt64.so.1
 
 	msg2 "#################################################################"
 	msg2 ""
