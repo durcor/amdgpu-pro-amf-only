@@ -1,4 +1,4 @@
-# Maintained by durcor <durcor@disroot.org>
+# Maintainer durcor <durcor@disroot.org>
 #
 # Based off of
 # Tk-Glitch <ti3nou at gmail dot com>'s
